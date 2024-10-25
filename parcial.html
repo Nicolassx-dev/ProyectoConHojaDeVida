@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos9.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>STEAK HOUSE</title>
+</head>
+<body>
+    <video autoplay loop muted id="background-video">
+        <source src="images/4781575-hd_1920_1080_25fps.mp4" type="video/mp4">
+        
+    </video>
+    <header>
+        <div id="logo">
+            <img src="images/Logo-removebg-preview.png" alt="Logo" id="logocabeza">
+            <h1>STEAK HOUSE</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Producto.html">Menú</a></li>
+                <li><a href="AcercadeNosotros.html">Productos</a></li>
+                <li><a href="Contacto.html">Otros</a></li>
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  
+    <div id="carrusel">
+        <div class="slides">
+            <div class="slide active">
+                <img src="images/pexels-cristian-rojas-7613432.jpg" alt="Descripción de la imagen 1">
+            </div>
+            <div class="slide">
+                <img src="images/pexels-thfotodesign-11220675.jpg" alt="Descripción de la imagen 2">
+            </div>
+            <div class="slide">
+                <img src="images/pexels-vidalbalielojrfotografia-14515096.jpg" alt="Descripción de la imagen 3">
+            </div>
+            <div class="slide">
+                <img src="images/pexels-minan1398-1482803.jpg" alt="#">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="product-box">
+        <div class="product-container">
+            <div class="product-card">
+                <h3 class="product-name">Picanha</h3>
+                <img src="images/Picanha.jpg" alt="Foto 1">
+                <div class="detail-box">
+                    <a href="PicanhaMasDetalle.html">Más detalle</a>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <h3 class="product-name">Fraldinha</h3>
+                <img src="images/Fraldinha.jpg" alt="Foto 1">
+                <div class="detail-box">
+                    <a href="FraldinhaMasDetalles.html">Más detalle</a>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <h3 class="product-name">Tomahawk</h3>
+                <img src="images/Tomahawk.jpg" alt="Foto 1">
+                <div class="detail-box">
+                    <a href="TomahawkMasDetalles.html">Más detalle</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>STEAK HOUSE</h3>
+                <p>Disfruta de cortes premium como picanhas, fraldinhas y tomahawks, todo preparado con la mejor calidad.</p>
+                <div class="footer-bottom">
+                    <p>Todos los derechos reservados &copy; 2024 | <a href="politica.html">Política de Privacidad</a></p>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="https://wa.me/59165066752?text=Me%20hacer%20una%20" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                </div>
+            </footer>
+    
+
+    <script>
+        let slideIndex = 0;
+        mostrarSlides(slideIndex);
+        
+        const interval = setInterval(() => {
+            mostrarSlides(slideIndex += 1);
+        }, 2500);
+        
+        function cambiarSlide(n) {
+            mostrarSlides(slideIndex += n);
+        }
+        
+        function mostrarSlides(n) {
+            const slides = document.getElementsByClassName("slide");
+            const slidesContainer = document.querySelector('.slides');
+            if (n >= slides.length) slideIndex = 0;
+            if (n < 0) slideIndex = slides.length - 1;
+    
+          
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+    
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "block";  
+            }
+        }
+
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('active'); 
+        }
+    </script>
+
+<a href="https://wa.me/59165066752?text=Me%20gustaría%20saber%20mas%20informacion" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+</body>
+</html>
+
